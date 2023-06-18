@@ -1,0 +1,414 @@
+object Form1: TForm1
+  Left = 454
+  Height = 638
+  Top = 49
+  Width = 801
+  Caption = 'Form1'
+  ClientHeight = 618
+  ClientWidth = 801
+  Menu = MainMenu
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '2.2.6.0'
+  object ScrollBox1: TScrollBox
+    Left = 1
+    Height = 616
+    Top = 0
+    Width = 800
+    HorzScrollBar.Page = 796
+    VertScrollBar.Page = 592
+    ClientHeight = 595
+    ClientWidth = 796
+    TabOrder = 0
+    OnClick = ScrollBox1Click
+    OnResize = ScrollBox1Resize
+    object ActorsLabel: TLabel
+      Left = 0
+      Height = 21
+      Top = 0
+      Width = 48
+      Caption = 'Actors'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object ActorGrid: TStringGrid
+      Left = -2
+      Height = 184
+      Top = 24
+      Width = 800
+      ColCount = 7
+      FixedCols = 0
+      RowCount = 3
+      TabOrder = 0
+      ColWidths = (
+        64
+        64
+        75
+        64
+        64
+        172
+        219
+      )
+      Cells = (
+        12
+        0
+        0
+        'ID'
+        0
+        1
+        '0'
+        1
+        0
+        'Username'
+        1
+        1
+        'Admin'
+        2
+        0
+        'Actor Type'
+        2
+        1
+        'Middleware'
+        3
+        0
+        'Version'
+        3
+        1
+        '0.01'
+        4
+        0
+        'LastCheck'
+        5
+        0
+        'Subscription?'
+        5
+        1
+        '0'
+        6
+        0
+        'Password MD5'
+      )
+    end
+    object MessageLabel: TLabel
+      Left = 0
+      Height = 21
+      Top = 216
+      Width = 124
+      Caption = 'Message Queue:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object MessageQueue: TStringGrid
+      Left = 0
+      Height = 179
+      Top = 248
+      Width = 800
+      ColCount = 6
+      FixedCols = 0
+      RowCount = 2
+      TabOrder = 1
+      ColWidths = (
+        64
+        64
+        64
+        41
+        161
+        238
+      )
+      Cells = (
+        6
+        0
+        0
+        'ID'
+        1
+        0
+        'Recipient'
+        2
+        0
+        'Sender'
+        3
+        0
+        'Receipt'
+        4
+        0
+        'Time'
+        5
+        0
+        'Message'
+      )
+    end
+    object ServerLabel: TLabel
+      Left = 0
+      Height = 21
+      Top = 432
+      Width = 54
+      Caption = 'Server:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      Left = 0
+      Height = 136
+      Top = 456
+      Width = 800
+      ClientHeight = 136
+      ClientWidth = 800
+      Color = clWindow
+      ParentColor = False
+      TabOrder = 2
+      OnClick = Panel1Click
+      object PortEdit: TEdit
+        Left = 136
+        Height = 23
+        Top = 8
+        Width = 217
+        TabOrder = 0
+        Text = '3128'
+      end
+      object Label1: TLabel
+        Left = 6
+        Height = 15
+        Top = 8
+        Width = 69
+        Caption = 'Port Number'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 6
+        Height = 15
+        Top = 31
+        Width = 69
+        Caption = 'Listen Queue'
+        ParentColor = False
+      end
+      object ListenQueueEdit: TEdit
+        Left = 136
+        Height = 23
+        Top = 31
+        Width = 217
+        TabOrder = 1
+        Text = '25'
+      end
+      object MaxConnectionsEdit: TEdit
+        Left = 136
+        Height = 23
+        Top = 53
+        Width = 216
+        TabOrder = 2
+        Text = '0'
+      end
+      object Label3: TLabel
+        Left = 6
+        Height = 15
+        Top = 53
+        Width = 93
+        Caption = 'Max Connections'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 8
+        Height = 15
+        Top = 76
+        Width = 71
+        Caption = 'Timeout Wait'
+        ParentColor = False
+      end
+      object TimeoutWaitEdit: TEdit
+        Left = 136
+        Height = 23
+        Top = 76
+        Width = 216
+        TabOrder = 3
+        Text = '5000'
+      end
+      object ServerButton: TButton
+        Left = 259
+        Height = 32
+        Top = 104
+        Width = 93
+        Caption = 'Activate'
+        OnClick = ServerButtonClick
+        TabOrder = 4
+      end
+      object Log: TMemo
+        Left = 360
+        Height = 133
+        Top = 3
+        Width = 434
+        Color = clCaptionText
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 5
+      end
+    end
+    object Shadow_Cosmetic: TShape
+      Left = 56
+      Height = 19
+      Top = 434
+      Width = 22
+      Brush.Color = clInactiveCaptionText
+      Pen.Style = psinsideFrame
+      Pen.Width = 4
+      Shape = stCircle
+    end
+    object RedLight: TShape
+      Left = 56
+      Height = 19
+      Top = 434
+      Width = 22
+      Brush.Color = clRed
+      Pen.Color = clMaroon
+      Pen.Style = psinsideFrame
+      Pen.Width = 4
+      Shape = stCircle
+    end
+    object Shadow_Cosmetic1: TShape
+      Left = 72
+      Height = 19
+      Top = 434
+      Width = 22
+      Brush.Color = clInactiveCaptionText
+      Pen.Style = psinsideFrame
+      Pen.Width = 4
+      Shape = stCircle
+    end
+    object GreenLight: TShape
+      Left = 72
+      Height = 19
+      Top = 434
+      Width = 22
+      Brush.Color = clLime
+      Pen.Color = clGreen
+      Pen.Style = psinsideFrame
+      Pen.Width = 4
+      Shape = stCircle
+      Visible = False
+    end
+    object Label5: TLabel
+      Left = 360
+      Height = 21
+      Top = 432
+      Width = 65
+      Caption = 'Console:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object AutoCheck: TCheckBox
+      Left = 432
+      Height = 19
+      Top = 434
+      Width = 79
+      Caption = 'AutoCheck'
+      Checked = True
+      OnChange = AutoCheckChange
+      State = cbChecked
+      TabOrder = 3
+    end
+    object PopUp: TCheckBox
+      Left = 512
+      Height = 19
+      Top = 434
+      Width = 166
+      Caption = 'Display Messages As Alerts?'
+      TabOrder = 4
+    end
+    object CheckMessagesButton: TButton
+      Left = 688
+      Height = 25
+      Top = 432
+      Width = 102
+      Caption = 'Check Messages'
+      OnClick = CheckMessagesButtonClick
+      TabOrder = 5
+    end
+  end
+  object MainMenu: TMainMenu
+    Left = 544
+    Top = 208
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object Reset: TMenuItem
+        Caption = 'Clear'
+        object MenuItem1: TMenuItem
+          Caption = 'Clear Actors'
+        end
+        object MenuItem2: TMenuItem
+          Caption = 'Clear Messages'
+        end
+        object MenuItem3: TMenuItem
+          Caption = 'Clear Old Messages'
+        end
+      end
+      object CloseMenu: TMenuItem
+        Caption = 'Close'
+        OnClick = CloseMenuClick
+      end
+    end
+    object ActorsMenu: TMenuItem
+      Caption = 'ActorsMenu'
+      object PublishMenu: TMenuItem
+        Caption = 'Publish Actor'
+        OnClick = PublishMenuClick
+      end
+      object ActorSearchMenu: TMenuItem
+        Caption = 'Search'
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Messages'
+      object MenuItem6: TMenuItem
+        Caption = 'Send'
+        object ActorMessageMenu: TMenuItem
+          Caption = 'Spoof Actor Message'
+          OnClick = ActorMessageMenuClick
+        end
+        object SystemMessageMenu: TMenuItem
+          Caption = 'Send System Message'
+        end
+      end
+    end
+  end
+  object IdTCPServer1: TIdTCPServer
+    Bindings = <>
+    DefaultPort = 0
+    OnAfterBind = IdTCPServer1AfterBind
+    OnConnect = IdTCPServer1Connect
+    OnDisconnect = IdTCPServer1Disconnect
+    OnExecute = IdTCPServer1Execute
+    Left = 496
+    Top = 208
+  end
+  object AutoCheckTimer: TTimer
+    Interval = 10000
+    OnTimer = AutoCheckTimerTimer
+    Left = 736
+  end
+end
